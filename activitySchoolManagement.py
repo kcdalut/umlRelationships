@@ -7,12 +7,20 @@ class Person():
         return self.__age
 
     def display_details(self):
-        print(f"Name: {self.name}\nAge: {self.get_age()}")
+        return f"Name: {self.name}\nAge: {self.get_age()}"
 
         # Reflection: Using get_age() is better because it allows controlled access
         # to private data without directly exposing or modifying the attribute.
         # This helps protect the data and maintain encapsulation.
 
-person1 = Person("Lanz", 14)
+class Student(Person):
+    def __init__(self, name, age):
+        super().__init__(name, age)
 
-print(person1.get_age())
+    def study(self):
+        return f"{self.name} is studying."
+
+student1 = Student("Lanz", 14)
+
+print(student1.display_details())
+print(student1.study())
