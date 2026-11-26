@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 class Person():
     def __init__(self, name, age):
         self.name = name
@@ -12,6 +14,10 @@ class Person():
         # Reflection: Using get_age() is better because it allows controlled access
         # to private data without directly exposing or modifying the attribute.
         # This helps protect the data and maintain encapsulation.
+
+    @abstractmethod
+    def role(self):
+        pass
 
 class Student(Person):
     def __init__(self, name, age):
