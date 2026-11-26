@@ -36,6 +36,14 @@ class Teacher(Person):
     def role(self):
         return f"{self.name} is a Teacher"
 
+class Principal(Person):
+    def __init__(self, name, age):
+        super().__init__(name, age)
+    def manage_school(self):
+        return f"{self.name} is managing the school."
+    def role(self):
+        return f"{self.name} is the Principal"
+
 person1 = Person("Khiane", 30)
 print(person1.display_details())
 
@@ -48,3 +56,8 @@ teacher1 = Teacher("Dalut", 40)
 print(teacher1.display_details())
 print(teacher1.teach())
 print(teacher1.role())
+
+principal1 = Principal("Mr. X", 55)
+print(principal1.display_details())
+print(principal1.manage_school())
+print(principal1.role())
