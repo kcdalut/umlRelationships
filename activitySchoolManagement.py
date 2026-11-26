@@ -19,13 +19,16 @@ class Student(Person):
 
     def study(self):
         return f"{self.name} is studying."
+    def role(self):
+        return f"{self.name} is a Student"
 
 class Teacher(Person):
     def __init__(self, name, age):
         super().__init__(name, age)
-
     def teach(self):
         return f"{self.name} is teaching."
+    def role(self):
+        return f"{self.name} is a Teacher"
 
 person1 = Person("Khiane", 30)
 print(person1.display_details())
@@ -33,7 +36,9 @@ print(person1.display_details())
 student1 = Student("Lanz", 14)
 print(student1.display_details())
 print(student1.study())
+print(student1.role())
 
 teacher1 = Teacher("Dalut", 40)
 print(teacher1.display_details())
 print(teacher1.teach())
+print(teacher1.role())
