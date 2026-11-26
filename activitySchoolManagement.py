@@ -74,3 +74,7 @@ guidance_counselor1 = GuidanceCounselor("Ms. Y", 45)
 print(guidance_counselor1.display_details())
 print(guidance_counselor1.assist_students())
 print(guidance_counselor1.role())
+
+people = [student1, teacher1, principal1, guidance_counselor1]
+for person in people:
+    print(person.role())
